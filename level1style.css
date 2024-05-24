@@ -1,0 +1,185 @@
+* {
+    color: white;
+    
+}
+h1{
+    color: #0f1111;
+    text-align: center;
+    margin: 10px 0px;
+    text-shadow:2px 2px #222f3d;
+    background-color: #febd68;
+}
+h3{
+    text-align: center;
+}
+h2,.mob-info p {
+    text-align: left;
+    margin-left: 20px;
+}
+.main-content {
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* border: 2px solid black;*/
+    margin: 0;
+    background-color: #0f1111 ;
+}
+.product {
+    height: 250px;
+    width: 200px;
+   /* border: 2px solid black;*/
+    background-color: #222f3d;
+    margin-left: 10px;
+}
+.product:hover {
+   /* border: 2px solid white;*/
+    transform: scale(1.05);
+}
+.mob-img {
+    height: 220px;
+    width: 170px;
+    margin: 15px;
+}
+.product-info {
+    height: 250px;
+    width: 400px;
+    border: 2px solid black;
+    background-color: #222f3d;
+    margin-right: 10px;
+}
+
+.product-info:hover {
+     border: 2px solid white;
+     /*transform: scale(1.05);*/
+ }
+.product-info button{
+    color: black;
+    background-color: #febd68;
+    margin-left: 135px;
+    height: 30px;
+    font-size: small;
+}
+.product-info button:hover {
+    transform: scale(1.05);
+}
+
+.foot-panel1 {
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+
+.foot-panel3 {
+    background-color: #222f3d;
+    color: white;
+    border-top: 0.5px solid white;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#cart-items {
+    
+    border-bottom: 1px solid #ccc;
+    
+    padding-bottom: 15px;
+    
+    margin-bottom: 15px;
+    
+    }
+    
+    #total-price {
+    
+    font-weight: bold;
+    
+    }
+    
+    .remove-item-btn {
+    
+    background-color: #d9534f;
+    
+    }
+    
+    .remove-item-btn:hover {
+    
+    background-color: #c9302c;
+    
+    }
+    
+    button {
+    
+    padding: 10px 20px;
+    
+    background-color: #333;
+    
+    color: white;
+    
+    border: none;
+    
+    border-radius: 4px;
+    
+    font-size: 16px;
+    
+    cursor: pointer;
+    
+    transition: background-color 0.3s ease;
+    
+    }
+    
+    button:hover {
+    
+    background-color: #555;
+    
+    }
+    
+    .booked-items {
+    
+    margin-top: 20px;
+    
+    border-top: 1px solid #ccc;
+    
+    padding-top: 15px;
+    
+    }
+    
+    .booked-items .booked-item {
+    
+    display: flex;
+    
+    justify-content: space-between;
+    
+    margin-bottom: 10px;
+    
+    }
+    
+    .remove-booked-btn {
+    
+    background-color: #d9534f;
+    
+    cursor: pointer;
+    
+    padding: 5px 10px;
+    
+    color: white;
+    
+    border: none;
+    
+    border-radius: 3px;
+    
+    }
+    
+    .remove-booked-btn:hover {
+    
+    background-color: #c9302c;
+    
+    }
+    
+   
