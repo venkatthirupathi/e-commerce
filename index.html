@@ -61,7 +61,11 @@
             default:
               return true;
           }
-        }
+        };
+
+        window.onpageshow= function clearText (){
+          document.getElementById("user-text").value="";
+        };
       </script>
    <header>
     <div class="navbar">
