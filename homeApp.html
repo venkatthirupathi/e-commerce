@@ -6,6 +6,7 @@
     <title>Home-Appliances</title>
     <link rel="stylesheet" href="level1style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="myScript.js"></script>
     <!-- <style>
           .dabba {
             background: #b8c6d3;
@@ -29,88 +30,90 @@
 </head>
 <body>
     <h1>Home-Appliances</h1>
-    <div class="mob-box">
-        <div class="mob">
+    <div class="main-content">
+        <div class="product">
             <img src="images/Home-Appliances_img4.png" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>LG 5 Star Dual Inverter Split Air Conditioner - Floral White</h3>
             <h2>₹37,230</h2> 
             <p>M.R.P: <strike>₹48,990</strike>(24% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('LG AC', 37230)">Add to cart</button>
         </div>
-        <div class="mob">
+        <div class="product">
             <img src="images/Home-Appliances_img3.png" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>USHA Steam Pro si 3820 Steam Iron, White and Blue</h3>
             <h2>₹2,089</h2> 
             <p>M.R.P: <strike>₹2,661</strike>(21% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('Iron', 2089)">Add to cart</button>
 
 
         </div>
     </div>
-    <div class="mob-box">
-        <div class="mob">
+    <div class="main-content">
+        <div class="product">
             <img src="images/Home-Appliances_img2.png" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>Forbes Swift Clean 1200W Vacuum Cleaner, Red and Black</h3>
             <h2>₹4,999</h2> 
             <p>M.R.P: <strike>₹6,599</strike>(11% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('Vacuum', 4999)">Add to cart</button>
         </div>
-        <div class="mob">
+        <div class="product">
             <img src="images/Home-Appliances_img1.png" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>Usha Aquerra 10 Litre 5 Star Storage Water Heater (White)</h3>
             <h2>₹7,570</h2> 
             <p>M.R.P: <strike>₹11,895</strike>(36% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('Heater', 7570)">Add to cart</button>
         </div>
     </div>
-    <div class="mob-box">
-        <div class="mob">
+    <div class="main-content">
+        <div class="product">
             <img src="images\laptop_tablet_img3.png" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>HP Deskjet L419 All-In-One Printer, Blue and Black</h3>
             <h2>₹15,190</h2> 
             <p>M.R.P: <strike>₹16,500</strike>(7% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('HP Print', 15190)">Add to cart</button>
         </div>
-        <div class="mob">
+        <div class="product">
             <img src="images\fridge.jpg" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>SAMSUNG 198L Direct Cool Single Door 5 Star Refrigerator</h3>
             <h2>₹17,990</h2> 
             <p>M.R.P: <strike>₹21,990</strike>(18% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('Fridge', 17990)">Add to cart</button>
         </div>
     </div>
-    <div class="mob-box">
-        <div class="mob">
+    <div class="main-content">
+        <div class="product">
             <img src="images/fan.png" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>Havells Andria 1200mm Ceiling Fan (Pearl White), Standard</h3>
             <h2>₹3,290</h2> 
             <p>M.R.P: <strike>₹3,745</strike>(12% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('Havells', 3290)">Add to cart</button>
         </div>
-        <div class="mob">
+        <div class="product">
             <img src="images/washm.jpg" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>IFB 9 Kg 5 Star AI Powered Front Load Washing Machine</h3>
             <h2>₹40,490</h2> 
             <p>M.R.P: <strike>₹54,190</strike>(25% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('IFB WM', 40490)">Add to cart</button>
         </div>
     </div>
+
+    
     <!-- <div class="mob-box">
         <div class="mob">
             <img src="images/motorola.avif" alt="mob1" class="mob-img">
@@ -178,6 +181,27 @@
             </div>
         </div>
     </section> -->
+    <div class="main-content" style=" margin-top:10px ;display:flex; justify-content: space-between;">
+        <h2>Shopping Cart <i class="fa-solid fa-cart-shopping"></i></h2>
+        <div id="cart-items" style="display: flex;justify-content: space-between;"></div>
+        <p>Total Price: Rs<span id="total-price" style="margin:15px;">0.00</span></p>
+
+    </div>
+    <div class="main-content" style="height: 50px;">
+            
+        <button onclick="bookCart()" style="background-color: blue;">Book Cart</button>
+            
+            <p id="booking-message"></p>
+            
+    </div>
+              
+    <div class="main-content booked-items" style="display: flex; justify-content: space-between; margin-top: 10px;">
+            
+            <h2>Booked Items</h2>
+            
+            <div id="booked-items" style="display: flex;justify-content: space-between;margin: 15px;"></div>
+            
+    </div> 
     <footer>
         <a href="#">
         <div class="foot-panel1">

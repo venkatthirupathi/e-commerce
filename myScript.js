@@ -39,7 +39,7 @@ newItem.innerHTML = `
 
 <p>${item.name}</p>
 
-<p>$${item.price.toFixed(2)}</p>
+<p>Rs ${item.price}</p>
 
 <button class="remove-item-btn" onclick="removeCartItem(${index})">Remove</button>
 
@@ -103,9 +103,9 @@ newBookedItem.innerHTML = `
 
 <p>${item.name}</p>
 
-<p>$${item.price.toFixed(2)}</p>
+<p>Rs ${item.price}</p>
 
-<button class="remove-booked-btn" onclick="removeBookedItem(${index})">Remove</button>
+<button class="remove-booked-btn" onclick="removeBookedItem(${index})">Cancel</button>
 
 `;
 

@@ -6,7 +6,7 @@
     <title>Televisions</title>
     <link rel="stylesheet" href="level1style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <script src="myScript.js"></script>
     <!-- <style>
           .dabba {
             background: #b8c6d3;
@@ -82,84 +82,84 @@
         </div>
         <div class="mob-info"></div>
     </div> -->
-    <div class="mob-box">
-        <div class="mob">
+    <div class="main-content">
+        <div class="product">
             <img src="images\Televisions_img1.png" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>Sony 65 Inch 4K Ultra HD OLED Smart Google TV</h3>
-            <h2>₹3,39,990 </h2> 
-            <p>M.R.P: <strike>₹4,79,900</strike>(29% off)</p>
-            <button>Add to cart</button>
+            <h2>₹79,990 </h2> 
+            <p>M.R.P: <strike>₹1,19,900</strike>(33% off)</p>
+            <button onclick="addToCart('Sony65', 79990)">Add to cart</button>
         </div>
-        <div class="mob">
+        <div class="product">
             <img src="images\Televisions_img2.png" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>Sony Bravia 164 cm (65 inches) XR Series 4K LED Google TV </h3>
-            <h2>₹1,56,740</h2> 
-            <p>M.R.P: <strike>₹2,29,900</strike>(32% off)</p>
-            <button>Add to cart</button>
+            <h2>₹86,740</h2> 
+            <p>M.R.P: <strike>₹1,29,900</strike>(33% off)</p>
+            <button onclick="addToCart('SonyXR', 86740)">Add to cart</button>
         </div>
     </div> 
-    <div class="mob-box">
-        <div class="mob">
+    <div class="main-content">
+        <div class="product">
             <img src="images\Televisions_img4.png" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>Samsung 138 cm (55 inches) 4K Ultra HD Smart NEO QLED TV</h3>
             <h2>₹99,990</h2> 
             <p>M.R.P: <strike>₹1,99,900</strike>(23% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('Samsung', 99990)">Add to cart</button>
         </div>
-        <div class="mob">
+        <div class="product">
             <img src="images\Televisions_img3.png" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>Sony Bravia 108 cm (43 inches) Full HD Smart LED Google TV</h3>
             <h2>₹39,000</h2> 
             <p>M.R.P: <strike>₹64,900</strike>(40% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('Sony108', 39000)">Add to cart</button>
         </div>
     </div>
-    <div class="mob-box">
-        <div class="mob">
+    <div class="main-content">
+        <div class="product">
             <img src="images\tv4.jpg" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>Panasonic 80 cm (32 inch) Full HD LED Black </h3>
             <h2>₹29,990 </h2> 
             <p>M.R.P: <strike>₹34,465</strike>(12% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('Panasonic', 29990)">Add to cart</button>
         </div>
-        <div class="mob">
+        <div class="product">
             <img src="images\tv5.jpg" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>LG 55UQ9000PSD 55 Inch LED 4K, 3840 x 2160 Pixels TV</h3>
             <h2>₹67,041</h2> 
             <p>M.R.P: <strike>₹89,900</strike>(29% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('LG55', 67041)">Add to cart</button>
         </div>
     </div> 
-    <div class="mob-box">
-        <div class="mob">
+    <div class="main-content">
+        <div class="product">
             <img src="images\tv6.jpg" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>LG 32LQ630B 32 Inch 720p HDR Smart LED HD TV</h3>
-            <h2>₹2,14,990</h2> 
-            <p>M.R.P: <strike>₹2,79,900</strike>(23% off)</p>
-            <button>Add to cart</button>
+            <h2>₹94,990</h2> 
+            <p>M.R.P: <strike>₹1,59,900</strike>(40% off)</p>
+            <button onclick="addToCart('LG32', 94990)">Add to cart</button>
         </div>
-        <div class="mob">
+        <div class="product">
             <img src="images\tv7.jpg" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>Black Samsung T4360 Smart HD TV 80 cm (32 inches)</h3>
             <h2>₹69,999</h2> 
             <p>M.R.P: <strike>₹85,999</strike>(18% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('BlackHD', 69999)">Add to cart</button>
         </div>
     </div>
 <!-- 
@@ -179,6 +179,27 @@
             </div>
         </div>
     </section> -->
+    <div class="main-content" style=" margin-top:10px ;display:flex; justify-content: space-between;">
+        <h2>Shopping Cart <i class="fa-solid fa-cart-shopping"></i></h2>
+        <div id="cart-items" style="display: flex;justify-content: space-between;"></div>
+        <p>Total Price: Rs<span id="total-price" style="margin:15px;">0.00</span></p>
+
+    </div>
+    <div class="main-content" style="height: 50px;">
+            
+        <button onclick="bookCart()" style="background-color: blue;">Book Cart</button>
+            
+            <p id="booking-message"></p>
+            
+    </div>
+              
+    <div class="main-content booked-items" style="display: flex; justify-content: space-between; margin-top: 10px;">
+            
+            <h2>Booked Items</h2>
+            
+            <div id="booked-items" style="display: flex;justify-content: space-between;margin: 15px;"></div>
+            
+    </div> 
     <footer>
         <a href="#">
         <div class="foot-panel1">

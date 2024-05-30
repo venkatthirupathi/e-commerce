@@ -22,7 +22,7 @@ h2,.mob-info p {
     justify-content: center;
     align-items: center;
    /* border: 2px solid black;*/
-    margin: 0;
+    margin: 0px;
     background-color: #0f1111 ;
 }
 .product {
@@ -47,6 +47,9 @@ h2,.mob-info p {
     border: 2px solid black;
     background-color: #222f3d;
     margin-right: 10px;
+}
+.product-info p,h2,h3 {
+    padding: 0px 12px;
 }
 
 .product-info:hover {
@@ -93,7 +96,7 @@ h2,.mob-info p {
     padding-bottom: 15px;
     
     margin-bottom: 15px;
-    
+  
     }
     
     #total-price {
@@ -103,7 +106,7 @@ h2,.mob-info p {
     }
     
     .remove-item-btn {
-    
+    margin-right: 10px;
     background-color: #d9534f;
     
     }
@@ -113,32 +116,7 @@ h2,.mob-info p {
     background-color: #c9302c;
     
     }
-    
-    button {
-    
-    padding: 10px 20px;
-    
-    background-color: #333;
-    
-    color: white;
-    
-    border: none;
-    
-    border-radius: 4px;
-    
-    font-size: 16px;
-    
-    cursor: pointer;
-    
-    transition: background-color 0.3s ease;
-    
-    }
-    
-    button:hover {
-    
-    background-color: #555;
-    
-    }
+   
     
     .booked-items {
     
@@ -152,15 +130,14 @@ h2,.mob-info p {
     
     .booked-items .booked-item {
     
-    display: flex;
-    
     justify-content: space-between;
     
     margin-bottom: 10px;
+    padding: 10px;
     
     }
     
-    .remove-booked-btn {
+     .remove-booked-btn {
     
     background-color: #d9534f;
     
@@ -182,4 +159,28 @@ h2,.mob-info p {
     
     }
     
-   
+    /* button {
+    
+    padding: 10px 20px;
+    
+    background-color: #333;
+    
+    color: white;
+    
+    border: none;
+    
+    border-radius: 4px;
+    
+    font-size: 16px;
+    
+    cursor: pointer;
+    
+    transition: background-color 0.3s ease;
+    
+    } */
+    
+    /* button:hover {
+    
+    background-color: #555;
+    
+    } */

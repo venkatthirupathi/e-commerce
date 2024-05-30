@@ -6,7 +6,7 @@
     <title>Laptops-Tablets</title>
     <link rel="stylesheet" href="level1style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <script src="myScript.js"></script>
     <!-- <style>
         .dabba {
             background: #b8c6d3;
@@ -30,24 +30,24 @@
 </head>
 <body>
     <h1>Laptops-Tablets</h1>
-    <div class="mob-box">
-        <div class="mob">
+    <div class="main-content">
+        <div class="product">
             <img src="images\laptop_tablet_img1.png" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>Lenovo Ideapad Slim 3i (2021) Intel Core i3 11th Gen</h3>
             <h2>₹39,650 </h2> 
             <p>M.R.P: <strike>₹60,090</strike>(34% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('Ideapad', 39650)">Add to cart</button>
         </div>
-        <div class="mob">
+        <div class="product">
             <img src="images\laptop_tablet_img4.png" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>HP Laptop 15s, AMD Ryzen 3 5300U, 15.6-inch (39.6 cm)</h3>
             <h2>₹30,990</h2> 
             <p>M.R.P: <strike>₹47,999</strike>(35% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('HP 15s', 30990)">Add to cart</button>
         </div>
     </div>
     <!-- <div class="mob-box">
@@ -67,64 +67,64 @@
         <div class="mob-info"></div>
     </div> -->
     
-    <div class="mob-box">
-        <div class="mob">
+    <div class="main-content">
+        <div class="product">
             <img src="images\laptop3.jpg" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>HP Ryzen 3 3250U Processor, 14 inch Anti-Glare HD Laptop</h3>
             <h2>₹40,290</h2> 
             <p>M.R.P: <strike>₹53,900</strike>(25% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('HP LPT', 40290)">Add to cart</button>
         </div>
-        <div class="mob">
+        <div class="product">
             <img src="images\tab3.jpg" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>OnePlus Pad Go 8GB RAM 128GB ROM 11.35 inch Tablet</h3>
             <h2>₹18,999</h2> 
             <p>M.R.P: <strike>₹19,999</strike>(5% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('1+ Pad', 18999)">Add to cart</button>
         </div>
     </div>
-    <div class="mob-box">
-        <div class="mob">
+    <div class="main-content">
+        <div class="product">
             <img src="images\laptop5.jpg" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>Dell 15 Laptop, AMD Ryzen 5-5500U Processor/ 8GB/ 512GB SSD/ 15.6"</h3>
             <h2>₹40,030 </h2> 
             <p>M.R.P: <strike>₹49,477</strike>(19% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('Dell 15', 40030)">Add to cart</button>
         </div>
-        <div class="mob">
+        <div class="product">
             <img src="images\laptop6.jpg" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>Acer Aspire Lite 12th Gen Intel Core i7-1255U Premium Metal Laptop </h3>
             <h2>₹52,990</h2> 
             <p>M.R.P: <strike>₹80,999</strike>(35% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('Acer LPT', 52990)">Add to cart</button>
         </div>
     </div>
-    <div class="mob-box">
-        <div class="mob">
+    <div class="main-content">
+        <div class="product">
             <img src="images\tab.jpg" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>Samsung Galaxy Tab A9+ 5G Tablet, 128GB ROM, 8GB RAM</h3>
             <h2>₹24,500</h2> 
             <p>M.R.P: <strike>₹29,999</strike>(18% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('SG A9+', 24500)">Add to cart</button>
         </div>
-        <div class="mob">
+        <div class="product">
             <img src="images\tab2.jpg" alt="mob1" class="mob-img">
         </div>
-        <div class="mob-info">
+        <div class="product-info">
             <h3>HONOR Pad 9 with Free Bluetooth Keyboard, 12.1-Inch - Gray</h3>
             <h2>₹24,999</h2> 
             <p>M.R.P: <strike>₹34,999</strike>(29% off)</p>
-            <button>Add to cart</button>
+            <button onclick="addToCart('Honor', 24999)">Add to cart</button>
         </div>
     </div>
     <!-- <section>
@@ -146,6 +146,27 @@
 
     
      -->
+     <div class="main-content" style=" margin-top:10px ;display:flex; justify-content: space-between;">
+        <h2>Shopping Cart <i class="fa-solid fa-cart-shopping"></i></h2>
+        <div id="cart-items" style="display: flex;justify-content: space-between;"></div>
+        <p>Total Price: Rs<span id="total-price" style="margin:15px;">0.00</span></p>
+
+    </div>
+    <div class="main-content" style="height: 50px;">
+            
+        <button onclick="bookCart()" style="background-color: blue;">Book Cart</button>
+            
+            <p id="booking-message"></p>
+            
+    </div>
+              
+    <div class="main-content booked-items" style="display: flex; justify-content: space-between; margin-top: 10px;">
+            
+            <h2>Booked Items</h2>
+            
+            <div id="booked-items" style="display: flex;justify-content: space-between;margin: 15px;"></div>
+            
+    </div> 
      <footer>
         <a href="#">
         <div class="foot-panel1">

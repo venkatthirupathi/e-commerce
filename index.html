@@ -32,6 +32,37 @@
     </style>
 </head> 
 <body>
+    <script>
+        function clickhandler() {
+          var userSearchText = document
+            .getElementById("user-text")
+            .value.toLowerCase();
+          switch (userSearchText) {
+            case "mobiles":
+              return window.open("mobiles.html", "_self");
+            case "laptops":
+            case "tablets":
+            case "laptops & tablets":
+              return window.open("laptopsTablets.html", "_self");
+            case "televisions":
+              return window.open("televisions.html", "_self");
+            case "home appliances":
+            case "home":
+              return window.open("homeApp.html", "_self");
+            case "kitchen appliances":
+            case "kitchen":
+              return window.open("kitchenApp.html", "_self");
+            case "audio & video":
+            case "audio":
+            case "video":
+              return window.open("audioVideo.html", "_self");
+            case "personals":
+              return window.open("personals.html", "_self");
+            default:
+              return true;
+          }
+        }
+      </script>
    <header>
     <div class="navbar">
         <div class="nav-logo border">
@@ -46,13 +77,19 @@
         </div> -->
         <div class="nav-search">
             <!-- <select class="search-select">
-                <option>All</option>
-            </select> -->
-            <input placeholder="Search for products" class="search-input">
-            <div class="search-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                  <option>All</option>
+              </select> -->
+            <input
+              type="text"
+              placeholder="Search for products"
+              class="search-input"
+              id="user-text"
+              value=""
+            />
+            <div class="search-icon" onclick="clickhandler()">
+              <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-        </div>
+          </div>
         <!-- <div class="nav-signin border">
             <p class="nav-second lgsg"><p><span><a href="login.html">Login</a></span></p></p>
                  <p class="nav-second">Accounts & Lists</p> 
@@ -62,9 +99,9 @@
             <!-- <a href="signup.html"><p><span>Sign in</span></p></a> -->
             <!-- <p class="nav-second">Orders</p> -->
         </div>
-        <div class="nav-return border">
+        <!-- <div class="nav-return border">
             <p class="nav-second lgsg"><p><span><a href="orders.html" style="text-decoration: none;color: white;font-size: medium;font-weight: 500;">Orders</a></span></p></p>
-        </div>
+        </div> -->
         <div class="nav-cart border" style="padding: 9px;">
           <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>
             Cart</a>
