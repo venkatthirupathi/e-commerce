@@ -7,69 +7,53 @@
     <link rel="stylesheet" href="signupstyles.css">
 </head>
 <body>
-    <form action="action_page.php" style="border:1px solid #ccc">
+    <form id="signupForm" style="border:1px solid #ccc">
         <div class="signin">
-          <div class="container">
-            <h1 style="text-align: center; ">Sign up</h1>
-            <p>Please fill in this form to create an account.</p>
-            <hr>
-        
-            <label for="username"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="username" required>
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-        
-             <label for="psw-repeat"><b>Repeat Password</b></label>
-            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-            <!-- <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-        
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required> -->
-        
-            <!-- <label for="psw-repeat"><b>Repeat Password</b></label>
-            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-         -->
-            <!-- <label>
-              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-            </label>
-         -->
-            <!-- <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p> -->
+            <div class="container">
+                <h1 style="text-align: center;">Sign up</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
 
-            <!-- <div class="clearfix">
-              <button type="button" class="cancelbtn">Cancel</button>
-              <button type="submit" class="signupbtn">Sign Up</button>
-            </div> -->
-          </div>
-            <div class="container" style="background-color:#f1f1f1">
-              <!-- <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p> -->
-              <a href="index.html" style="text-decoration: none;color: white;"><button type="button" class="cancelbtn" style="color: black;">Cancel</button></a>
-              <button type="submit" class="signupbtn">Sign Up</button>
-              <p>Already have an account?<a href="login.html" style="color:dodgerblue"> Log in here.</a></p>
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" id="username" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
             </div>
-          </div>
-          </form>
-      </body>
+            <div class="container" style="background-color:#f1f1f1">
+                <a href="index.html" style="text-decoration: none;color: white;">
+                    <button type="button" class="cancelbtn" style="color: black;">Cancel</button>
+                </a>
+                <button type="submit" class="signupbtn">Sign Up</button>
+                <p>Already have an account? <a href="login.html" style="color:dodgerblue">Log in here.</a></p>
+            </div>
+        </div>
+    </form>
 
-      <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyD2vINtKzqbhN8PXmZKh28fG8Dwq7uzzVs",
-          authDomain: "signup-authentication-ee5d0.firebaseapp.com",
-          databaseURL: "https://signup-authentication-ee5d0-default-rtdb.firebaseio.com",
-          projectId: "signup-authentication-ee5d0",
-          storageBucket: "signup-authentication-ee5d0.appspot.com",
-          messagingSenderId: "835449405082",
-          appId: "1:835449405082:web:d4cb9918449bcb62466923"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-      </script>
-      </html>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('psw').value;
+            const passwordRepeat = document.getElementById('psw-repeat').value;
+
+            if (password !== passwordRepeat) {
+                alert('Passwords do not match!');
+                return;
+            }
+
+            if (localStorage.getItem(username)) {
+                alert('Username already exists!');
+                return;
+            }
+
+            localStorage.setItem(username, password);
+            alert('Sign-up successful!');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

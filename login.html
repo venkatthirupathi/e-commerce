@@ -7,54 +7,49 @@
     <link rel="stylesheet" href="loginstyles.css">
 </head>
 <body>
-    <form action="action_page.php" method="post">
-     <!--  <div class="imgcontainer">
-          <img src="img_avatar2.png" alt="Avatar" class="avatar">
-        </div>
-    -->
+    <form id="loginForm">
         <div class="signin">
-          <div class="container">
-            <h1 style="text-align: center;">Login</h1>
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-        
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-        
-            <button type="submit">Login</button>
-            <!-- <label>
-              <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label> -->
-          </div>
-        
-          <div class="container" style="background-color:#f1f1f1">
-            <a href="signup.html" style="text-decoration: none;color: white;"><button type="button" class="cancelbtn" style="color: black;">Cancel</button></a>
-            <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
-          </div>
+            <div class="container">
+                <h1 style="text-align: center;">Login</h1>
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+                <button type="submit">Login</button>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <a href="signup.html" style="text-decoration: none;color: white;">
+                    <button type="button" class="cancelbtn" style="color: black;">Cancel</button>
+                </a>
+            </div>
         </div>
-      </form>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loggedInUser = localStorage.getItem('loggedInUser');
+            if (loggedInUser) {
+                alert('User signed in successfully');
+                window.location.href = 'index.html';
+            }
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('uname').value;
+            const password = document.getElementById('psw').value;
+            const storedPassword = localStorage.getItem(username);
+
+            if (storedPassword && storedPassword === password) {
+                localStorage.setItem('loggedInUser', username);
+                alert('Login successful');
+                window.location.href = 'index.html';
+            } else {
+                alert('Invalid username or password');
+            }
+        });
+    </script>
 </body>
-
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyD2vINtKzqbhN8PXmZKh28fG8Dwq7uzzVs",
-    authDomain: "signup-authentication-ee5d0.firebaseapp.com",
-    databaseURL: "https://signup-authentication-ee5d0-default-rtdb.firebaseio.com",
-    projectId: "signup-authentication-ee5d0",
-    storageBucket: "signup-authentication-ee5d0.appspot.com",
-    messagingSenderId: "835449405082",
-    appId: "1:835449405082:web:d4cb9918449bcb62466923"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-</script>
 </html>
-
